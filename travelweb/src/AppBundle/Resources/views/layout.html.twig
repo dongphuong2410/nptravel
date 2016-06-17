@@ -1,0 +1,40 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bundles/app/css/style.css') }}" rel="stylesheet" type="text/css" media="screen" />
+    <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block javascript %}
+    <script type="text/javascript" src="{{ asset('bundles/app/js/jquery-1.7.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/app/js/jquery.poptrox-1.0.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+    <div id="header" class="container">
+        <div id="logo">
+            <h1><a href="#">Fotofolium</a></h1>
+        </div>
+    </div>
+    <div id="menu">
+        <ul>
+            <li class="current_page_item"><a href="#">Homepage</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Photo Gallery</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <section>
+        {% block section %}{% endblock %}
+    </section>
+    {% block extra_javascript %}
+    {% endblock %}
+
+    <div id="footer">
+        <p>&copy; Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org">FCT</a>. Photos by <a href="http://fotogrph.com/">Fotogrph</a>.</p>
+    </div>
+<!-- end #footer -->
+{% endblock %}
+
