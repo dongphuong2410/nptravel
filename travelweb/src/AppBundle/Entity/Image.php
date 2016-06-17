@@ -31,9 +31,9 @@ class Image
     /**
      * @var string
      *
-     * @ORM\Column(name="data", type="blob")
+     * @ORM\Column(name="path", type="string", length=255)
      */
-    private $data;
+    private $path;
 
 
     /**
@@ -71,27 +71,27 @@ class Image
     }
 
     /**
-     * Set data
+     * Set path
      *
-     * @param string $data
+     * @param string $path
      *
      * @return Image
      */
-    public function setData($data)
+    public function setPath($path)
     {
-        $this->data = $data;
+        $this->path = $path;
 
         return $this;
     }
 
     /**
-     * Get data
+     * Get path
      *
      * @return string
      */
-    public function getData()
+    public function getPath()
     {
-        return $this->data;
+        return $this->path;
     }
 }
 
